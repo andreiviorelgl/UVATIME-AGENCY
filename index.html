@@ -863,19 +863,6 @@
 
 </head>
 <body>
-<!-- Cookie Modal -->
-<div class="modal-overlay" id="cookieModal">
-    <div class="modal">
-        <button class="modal-close" onclick="closeCookieModal()">✕</button>
-        <h2>COOKIES POLICY</h2>
-        <p>
-            We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our
-            traffic. By clicking "Accept", you consent to our use of cookies. Learn more by reading our <a href="#">Privacy
-            Policy</a>
-        </p>
-        <button class="btn" onclick="closeCookieModal()">ACCEPT</button>
-    </div>
-</div>
 
 <!-- Navigation -->
 <nav>
@@ -887,7 +874,7 @@
         </div>
         <div class="nav-links">
             <!-- Shopify & Offers both point to Services section for now -->
-            <a href="#services">Shopify Offers</a>
+            <a href="#services">Shopify</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
             <a href="#work">Portfolio</a>
@@ -901,7 +888,6 @@
     </div>
     <div class="mobile-menu" id="mobileMenu">
         <a href="#services" onclick="closeMobileMenu()">Shopify</a>
-        <a href="#services" onclick="closeMobileMenu()">Offers</a>
         <a href="#about" onclick="closeMobileMenu()">About</a>
         <a href="#services" onclick="closeMobileMenu()">Services</a>
         <a href="#work" onclick="closeMobileMenu()">Portfolio</a>
@@ -948,61 +934,6 @@
         </div>
     </section>
 
-    <!-- Team Section -->
-    <!--    <section>-->
-    <!--        <div class="container">-->
-    <!--            <p class="section-label">The Team</p>-->
-    <!--            <h2 class="section-title">MEET THE ROCKSTARS</h2>-->
-    <!--            <p class="section-description">-->
-    <!--                The laws of attraction always have a weird way of bringing like-minded people together. We are proud and-->
-    <!--                confident to say that our team simply rocks. Each member has a clear expertise and skillset, and by-->
-    <!--                working together we can guarantee the promise of unrivaled speeds in delivering fast, premium services.-->
-    <!--            </p>-->
-    <!--            <div class="grid grid-4">-->
-    <!--                <div class="card">-->
-    <!--                    <div class="card-image">-->
-    <!--                        <img src="https://ext.same-assets.com/346717325/1619656725.webp" alt="Sebastian Dricu">-->
-    <!--                    </div>-->
-    <!--                    <h3>SEBASTIAN DRICU</h3>-->
-    <!--                    <p class="role">UX & Wireframe Designer</p>-->
-    <!--                    <p>Sebi's the coolest, friendliest guy you'll meet. This is what makes him such a great UX designer:-->
-    <!--                        understanding people. Combine that with his digital talents, and you've got the guarantee of-->
-    <!--                        modern, eye-pleasing design.</p>-->
-    <!--                </div>-->
-    <!--                <div class="card">-->
-    <!--                    <div class="card-image">-->
-    <!--                        <img src="https://ext.same-assets.com/346717325/3202236205.webp" alt="Radu Sioneanu">-->
-    <!--                    </div>-->
-    <!--                    <h3>RADU SIONEANU</h3>-->
-    <!--                    <p class="role">Technical Mastermind</p>-->
-    <!--                    <p>The most beautiful cars in the world are also the fastest. This is why it's Radu's job (also-->
-    <!--                        known as Shonii) to cover every technical detail, making sure all engines are up-and-running.-->
-    <!--                        And that's how you get unmatched performance!</p>-->
-    <!--                </div>-->
-    <!--                <div class="card">-->
-    <!--                    <div class="card-image">-->
-    <!--                        <img src="https://ext.same-assets.com/346717325/1645743236.webp" alt="Andra Lalu">-->
-    <!--                    </div>-->
-    <!--                    <h3>ANDRA LALU</h3>-->
-    <!--                    <p class="role">Content Specialist</p>-->
-    <!--                    <p>Once you get a beautiful canvas and a bullet-proof setup, you're still missing out on the star:-->
-    <!--                        content. This is where Andra comes in, taking text copies at new heights, and making sure that-->
-    <!--                        visuals really do speak 1000 words.</p>-->
-    <!--                </div>-->
-    <!--                <div class="card">-->
-    <!--                    <div class="card-image">-->
-    <!--                        <img src="https://ext.same-assets.com/346717325/1589025057.webp" alt="Radu Neme">-->
-    <!--                    </div>-->
-    <!--                    <h3>RADU NEME</h3>-->
-    <!--                    <p class="role">Founder & Project Manager</p>-->
-    <!--                    <p>A great team needs a great leader, to put all the pieces together. Radu's vision of creating the-->
-    <!--                        most perfectly efficient workflow, without sacrificing product quality, is what the core beliefs-->
-    <!--                        of Coffeehouse are all about.</p>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </section>-->
-
     <!-- Services Section -->
     <section id="services">
         <div class="container">
@@ -1021,7 +952,7 @@
                     <p>Made to sell, designed to inspire! Bring your business onboard the Shopify train, take advantage
                         of the amazing features, and watch your store reach further than ever before. Prices start from
                         2600€.</p>
-                    <button class="btn">See offers</button>
+                    <button class="btn">Get in touch</button>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
@@ -1261,103 +1192,13 @@
             <p>© 2025 Copyright UVATIME S.R.L.</p>
             <div class="footer-bottom-links">
                 <a href="/terms-and-conditions">Terms & Conditions</a>
-                <a href="/privacy-folder">Privacy Policy</a>
+                <a href="/privacy-policy">Privacy Policy</a>
             </div>
         </div>
     </div>
 </footer>
 <script>
-    // Show cookie modal after 1 second
-    setTimeout(() => {
-        document.getElementById('cookieModal').classList.add('active');
-    }, 1000);
-
-    function closeCookieModal() {
-        document.getElementById('cookieModal').classList.remove('active');
-    }
-
-    function toggleMobileMenu() {
-        const menu = document.getElementById('mobileMenu');
-        menu.classList.toggle('active');
-    }
-
-    function closeMobileMenu() {
-        document.getElementById('mobileMenu').classList.remove('active');
-    }
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-        const menu = document.getElementById('mobileMenu');
-        const hamburger = document.querySelector('.hamburger');
-        if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
-            menu.classList.remove('active');
-        }
-    });
-
-    // Hide / show nav on scroll
-    let lastScrollY = window.scrollY;
-
-    window.addEventListener('scroll', () => {
-        const nav = document.querySelector('nav');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const currentY = window.scrollY;
-        const threshold = 80; // how much to scroll before nav can hide
-
-        // Don't hide nav while mobile menu is open
-        if (mobileMenu.classList.contains('active')) {
-            nav.classList.remove('nav-hidden');
-            lastScrollY = currentY;
-            return;
-        }
-
-        if (currentY > threshold && currentY > lastScrollY) {
-            // scrolling down
-            nav.classList.add('nav-hidden');
-        } else {
-            // scrolling up or near top
-            nav.classList.remove('nav-hidden');
-        }
-
-        lastScrollY = currentY;
-    });
-
-    (function () {
-        const bg = document.querySelector('.container-hero-hp');
-        const overlay = document.querySelector('.dark-on-scroll');
-        const heroText = document.querySelector('.container-hero-text');
-
-        if (!bg || !overlay || !heroText) return;
-
-        const baseScale = 1;      // starting scale
-        const maxScale = 1.1;     // how much to zoom as you scroll
-
-        window.addEventListener('scroll', () => {
-            const scrollY = window.scrollY;
-            const vh = window.innerHeight || 1;
-            const progress = Math.min(scrollY / vh, 1); // 0 → 1 over first viewport
-
-            // Parallax + scale for background
-            const translateY = scrollY * 0.25; // slower than scroll
-            const scale = baseScale + (maxScale - baseScale) * progress;
-
-            bg.style.transform =
-                `translate3d(0, 0, 0) ` +
-                `scale3d(${scale}, ${scale}, 1) ` +
-                `rotateX(0deg) rotateY(0deg) rotateZ(0deg) ` +
-                `skew(0deg, 0deg)`;
-            // ^ keeps the full transform chain you wanted
-
-            // Dark overlay fade in
-            overlay.style.opacity = (progress * 0.85).toFixed(2);
-
-            // Fade + lift text slightly
-            const textOpacity = 1 - progress * 0.7;
-            const textTranslate = progress * -20; // move up a bit
-            heroText.style.opacity = textOpacity;
-            heroText.style.transform = `translate3d(0, ${textTranslate}px, 0)`;
-        });
-    })();
-
+    function toggleMobileMenu(){document.getElementById("mobileMenu").classList.toggle("active")}function closeMobileMenu(){document.getElementById("mobileMenu").classList.remove("active")}document.addEventListener("click",e=>{const t=document.getElementById("mobileMenu"),n=document.querySelector(".hamburger");t.contains(e.target)||n.contains(e.target)||t.classList.remove("active")});let lastScrollY=window.scrollY;window.addEventListener("scroll",()=>{const e=document.querySelector("nav"),t=document.getElementById("mobileMenu"),n=window.scrollY,o=80;t.classList.contains("active")?(e.classList.remove("nav-hidden"),lastScrollY=n):(n>o&&n>lastScrollY?e.classList.add("nav-hidden"):e.classList.remove("nav-hidden"),lastScrollY=n)}),function(){const e=document.querySelector(".container-hero-hp"),t=document.querySelector(".dark-on-scroll"),n=document.querySelector(".container-hero-text");if(!e||!t||!n)return;const o=1,c=1.1;window.addEventListener("scroll",()=>{const r=window.scrollY,i=window.innerHeight||1,l=Math.min(r/i,1),a=r*.25,s=o+(c-o)*l;e.style.transform=`translate3d(0, 0, 0) scale3d(${s}, ${s}, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`,t.style.opacity=(.85*l).toFixed(2);const d=1-.7*l,m=-20*l;n.style.opacity=d,n.style.transform=`translate3d(0, ${m}px, 0)`})}();
 </script>
 </body>
 </html>
