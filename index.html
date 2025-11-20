@@ -146,9 +146,10 @@
         }
 
         @media (min-width: 768px) {
-            .logo-icon img{
+            .logo-icon img {
                 height: 65px;
             }
+
             .nav-links {
                 display: flex;
             }
@@ -786,18 +787,22 @@
 
         /* Mobile tweaks */
         @media screen and (max-width: 767px) {
-            .h3{
+            .h3 {
                 font-size: 40px;
             }
+
             .container {
                 padding: 0;
             }
-            #work{
-                padding:1rem;
+
+            #work {
+                padding: 1rem;
             }
-            .portfolio-content{
+
+            .portfolio-content {
                 width: 100%;
             }
+
             .portfolio-item.item-2 .portfolio-image,
             .portfolio-item.item-4 .portfolio-image {
                 order: 1;
@@ -829,6 +834,7 @@
                 font-size: 1rem;
             }
         }
+
         @media (max-width: 768px) {
             .portfolio-item {
                 flex-direction: column;
@@ -854,7 +860,7 @@
             /* clamp long description paragraphs, but NOT the 'services' row */
             .portfolio-content p:not(.services) {
                 display: -webkit-box;
-                -webkit-line-clamp: 4;       /* show ~4 lines */
+                -webkit-line-clamp: 4; /* show ~4 lines */
                 -webkit-box-orient: vertical;
                 overflow: hidden;
             }
@@ -983,9 +989,10 @@
 
                     </div>
                     <h3>MOBILE DEVELOPMENT</h3>
-                    <p>Build mobile experiences that perform, engage, and scale! From native iOS & Android to
-                        cross-platform and PWAs, we design, develop, optimize, and support apps that users love. Launch
-                        faster, grow smarter.</p>
+                    <p>Build mobile experiences that perform, engage, and scale! We specialize in cross-platform apps
+                        using React Native and Progressive Web Apps (PWAs), delivering high-performance solutions for
+                        both iOS and Android — optimized for speed, usability, and growth.</p>
+
                     <button class="btn">Get in touch</button>
                 </div>
             </div>
@@ -1198,7 +1205,35 @@
     </div>
 </footer>
 <script>
-    function toggleMobileMenu(){document.getElementById("mobileMenu").classList.toggle("active")}function closeMobileMenu(){document.getElementById("mobileMenu").classList.remove("active")}document.addEventListener("click",e=>{const t=document.getElementById("mobileMenu"),n=document.querySelector(".hamburger");t.contains(e.target)||n.contains(e.target)||t.classList.remove("active")});let lastScrollY=window.scrollY;window.addEventListener("scroll",()=>{const e=document.querySelector("nav"),t=document.getElementById("mobileMenu"),n=window.scrollY,o=80;t.classList.contains("active")?(e.classList.remove("nav-hidden"),lastScrollY=n):(n>o&&n>lastScrollY?e.classList.add("nav-hidden"):e.classList.remove("nav-hidden"),lastScrollY=n)}),function(){const e=document.querySelector(".container-hero-hp"),t=document.querySelector(".dark-on-scroll"),n=document.querySelector(".container-hero-text");if(!e||!t||!n)return;const o=1,c=1.1;window.addEventListener("scroll",()=>{const r=window.scrollY,i=window.innerHeight||1,l=Math.min(r/i,1),a=r*.25,s=o+(c-o)*l;e.style.transform=`translate3d(0, 0, 0) scale3d(${s}, ${s}, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`,t.style.opacity=(.85*l).toFixed(2);const d=1-.7*l,m=-20*l;n.style.opacity=d,n.style.transform=`translate3d(0, ${m}px, 0)`})}();
+    function toggleMobileMenu() {
+        document.getElementById("mobileMenu").classList.toggle("active")
+    }
+
+    function closeMobileMenu() {
+        document.getElementById("mobileMenu").classList.remove("active")
+    }
+
+    document.addEventListener("click", e => {
+        const t = document.getElementById("mobileMenu"), n = document.querySelector(".hamburger");
+        t.contains(e.target) || n.contains(e.target) || t.classList.remove("active")
+    });
+    let lastScrollY = window.scrollY;
+    window.addEventListener("scroll", () => {
+        const e = document.querySelector("nav"), t = document.getElementById("mobileMenu"), n = window.scrollY, o = 80;
+        t.classList.contains("active") ? (e.classList.remove("nav-hidden"), lastScrollY = n) : (n > o && n > lastScrollY ? e.classList.add("nav-hidden") : e.classList.remove("nav-hidden"), lastScrollY = n)
+    }), function () {
+        const e = document.querySelector(".container-hero-hp"), t = document.querySelector(".dark-on-scroll"),
+            n = document.querySelector(".container-hero-text");
+        if (!e || !t || !n) return;
+        const o = 1, c = 1.1;
+        window.addEventListener("scroll", () => {
+            const r = window.scrollY, i = window.innerHeight || 1, l = Math.min(r / i, 1), a = r * .25,
+                s = o + (c - o) * l;
+            e.style.transform = `translate3d(0, 0, 0) scale3d(${s}, ${s}, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)`, t.style.opacity = (.85 * l).toFixed(2);
+            const d = 1 - .7 * l, m = -20 * l;
+            n.style.opacity = d, n.style.transform = `translate3d(0, ${m}px, 0)`
+        })
+    }();
 </script>
 </body>
 </html>
