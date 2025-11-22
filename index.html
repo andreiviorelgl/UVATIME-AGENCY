@@ -97,7 +97,7 @@
         }
 
         .nav-links a {
-            font-size: 0.875rem;
+            font-size: 1rem;
             text-transform: uppercase;
             color: #fff;
             text-decoration: none;
@@ -107,7 +107,7 @@
         }
 
         .nav-links a:hover {
-            color: #ffffff;
+            color: #9b9b9b;
             opacity: 1;
         }
 
@@ -203,6 +203,7 @@
             font-size: clamp(3rem, 8vw, 7rem);
             text-align: center;
             margin-bottom: 2rem;
+            font-weight: 400;
         }
 
         .section-description {
@@ -313,6 +314,7 @@
             font-family: 'Bebas Neue', sans-serif;
             font-size: 1.875rem;
             margin-bottom: 1rem;
+            font-weight: 400;
         }
 
         .service-card p {
@@ -361,12 +363,13 @@
 
         .portfolio-content {
             width: 50%;
-        }
+        }.section-description
 
         .portfolio-content h3 {
             font-family: 'Bebas Neue', sans-serif;
             font-size: clamp(3rem, 6vw, 6rem);
             margin-bottom: 1.5rem;
+            font-weight: 400;
         }
 
         .portfolio-content p {
@@ -814,6 +817,7 @@
             .portfolio-item.item-3 .portfolio-image {
                 width: 100%;
                 height: 100%;
+                order:-1;
             }
 
             .footer-section {
@@ -880,7 +884,7 @@
         </div>
         <div class="nav-links">
             <!-- Shopify & Offers both point to Services section for now -->
-            <a href="#services">Shopify</a>
+            <a href="/shopify-offers">Shopify Offers</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
             <a href="#work">Portfolio</a>
@@ -1221,7 +1225,8 @@
     window.addEventListener("scroll", () => {
         const e = document.querySelector("nav"), t = document.getElementById("mobileMenu"), n = window.scrollY, o = 80;
         t.classList.contains("active") ? (e.classList.remove("nav-hidden"), lastScrollY = n) : (n > o && n > lastScrollY ? e.classList.add("nav-hidden") : e.classList.remove("nav-hidden"), lastScrollY = n)
-    }), function () {
+    }),
+        function () {
         const e = document.querySelector(".container-hero-hp"), t = document.querySelector(".dark-on-scroll"),
             n = document.querySelector(".container-hero-text");
         if (!e || !t || !n) return;
